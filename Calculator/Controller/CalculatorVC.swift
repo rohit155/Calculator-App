@@ -208,6 +208,7 @@ class CalculatorVC: UIViewController {
     
     //############## Getting result for entire list of string ################
     func getResultnew(index: Int) {
+        guard inputEquation.indices.contains(index + 1) else { return }
         let firstN = inputEquation[index - 1]
         let secondN = inputEquation[index + 1]
         let optr = inputEquation[index]
